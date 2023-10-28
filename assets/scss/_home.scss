@@ -289,9 +289,10 @@ nav {
                             background-image: linear-gradient(45deg, $pr_blue_color, $sc_blue_color);
                             @include flex(center, center);
                             transition: 0.3s;
-                            &:hover{
-        
-                                background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+
+                            &:hover {
+
+                                background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                             }
                         }
                     }
@@ -380,9 +381,10 @@ nav {
                     @include flex(center, center);
                     margin-bottom: 42px;
                     transition: 0.3s;
-                    &:hover{
 
-                        background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+                    &:hover {
+
+                        background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                     }
                 }
             }
@@ -474,9 +476,10 @@ nav {
                 @include flex(center, center);
                 transform: translateY(50%);
                 transition: 0.3s;
-                &:hover{
 
-                    background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+                &:hover {
+
+                    background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                 }
             }
         }
@@ -579,9 +582,10 @@ nav {
                 background-image: linear-gradient(45deg, $pr_blue_color, $sc_blue_color);
                 @include flex(center, center);
                 transition: 0.3s;
-                &:hover{
 
-                    background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+                &:hover {
+
+                    background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                 }
             }
         }
@@ -661,9 +665,10 @@ nav {
                         @include flex(center, center);
                         transform: translateY(50%);
                         transition: 0.3s;
-                        &:hover{
-    
-                            background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+
+                        &:hover {
+
+                            background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                         }
                     }
                 }
@@ -684,6 +689,60 @@ nav {
         }
     }
 
+}
+
+.dbl_swiper {
+    padding-bottom: 130px;
+
+    .container {
+        .dbl_swiper_top {
+            padding: 100px 0 56px;
+
+            &_title {
+                @include fond(500, 40, 40);
+                color: $pr_blue_color;
+                text-align: center;
+                display: block;
+            }
+        }
+
+        .dbl_swiper_bottom {
+            position: relative;
+
+            .dbl_swiper {
+                &_slide {
+                    .item {
+                        img {
+                            width: 275px;
+                            height: 130px;
+                            object-fit: cover;
+                            border-radius: 30px;
+                        }
+                    }
+                }
+            }
+
+            .dbl_swiper_pagination {
+                @include flex(center, space-between);
+                position: absolute;
+                width: 110%;
+                top: 50%;
+                z-index: 2;
+                left: -60px;
+
+                @include media(1300px) {
+                    width: 100%;
+                    left: 0;
+                }
+@include media(600px){
+    display: none;
+}
+                .icon {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -747,9 +806,10 @@ footer {
                             background-image: linear-gradient(45deg, $pr_blue_color, $sc_blue_color);
                             @include flex(center, center);
                             transition: 0.3s;
-                            &:hover{
-        
-                                background-image: linear-gradient(45deg, $sc_blue_color,$sc_blue_color);
+
+                            &:hover {
+
+                                background-image: linear-gradient(45deg, $sc_blue_color, $sc_blue_color);
                             }
                         }
                     }

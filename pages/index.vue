@@ -1,32 +1,6 @@
 <template>
   <div>
-    <div class="tekshiruv">
-      <div class="container">
-        <swiper
-        :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation]"
-          :slidesPerView="3"
-          :grid="{
-            rows: 2,
-          }"
-          :spaceBetween="30"
-          :pagination="{
-            clickable: true,
-          }"
-          class="mySwiper"
-        >
-          <swiper-slide>Slide 1</swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide
-          ><swiper-slide>Slide 3</swiper-slide>
-          <swiper-slide>Slide 4</swiper-slide
-          ><swiper-slide>Slide 5</swiper-slide>
-          <swiper-slide>Slide 6</swiper-slide
-          ><swiper-slide>Slide 7</swiper-slide>
-          <swiper-slide>Slide 8</swiper-slide
-          ><swiper-slide>Slide 9</swiper-slide>
-        </swiper>
-      </div>
-    </div>
-    <!-- <div class="hero">
+    <div class="hero">
       <div class="container">
         <Swiper
           class="hero_swiper"
@@ -333,7 +307,155 @@
         </div>
       </div>
     </div> 
-     <footer>
+    <div class="dbl_swiper">
+      <div class="container">
+        <div class="dbl_swiper_top">
+          <div class="dbl_swiper_top_title">
+            ПАРТНЕРЫ
+          </div>
+        </div>
+        <div class="dbl_swiper_bottom">
+          <Swiper
+          :grid="{
+            fill: 'row',
+            rows: 2,
+          }"
+          :slidesPerView="4"
+          :spaceBetween="30"
+          :modules="[SwiperGrid,SwiperNavigation]"
+          :navigation="{
+            prevEl: '.dbl_swiper_prev',
+            nextEl: '.dbl_swiper_next',
+          }" :breakpoints="{
+            '200': {
+              slidesPerView: 1,
+              
+            },
+            '600': {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              
+            },
+            '800': {
+              slidesPerView: 2,
+              
+            },
+            '1020': {
+              spaceBetween: 30,
+              slidesPerView: 3,
+              
+            },
+            '1370': {
+              spaceBetween: 110,
+              slidesPerView: 4,
+              
+            },
+          }"
+          class="dbl_swiper"
+        >
+          <SwiperSlide v-for="item in 20" :key="item" class="dbl_swiper_slide">
+            <div class="item">
+              <img
+                :src="`https://picsum.photos/id/${item + 50}/200/300`"
+                alt="photo"
+              />
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+        <div class="dbl_swiper_pagination">
+          <div class="dbl_swiper_prev icon">
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="25"
+                fill="url(#paint0_linear_502_209)"
+              />
+              <g clip-path="url(#clip0_502_209)">
+                <path
+                  d="M18.0848 24.4999C18.0848 24.1594 18.2148 23.819 18.4743 23.5593L26.644 15.3898C27.1637 14.8701 28.0063 14.8701 28.5257 15.3898C29.0452 15.9092 29.0452 16.7517 28.5257 17.2714L21.2968 24.4999L28.5255 31.7285C29.045 32.2482 29.045 33.0906 28.5255 33.61C28.006 34.1299 27.1634 34.1299 26.6437 33.61L18.4741 25.4406C18.2145 25.1808 18.0848 24.8403 18.0848 24.4999Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_502_209"
+                  x1="25"
+                  y1="0"
+                  x2="25"
+                  y2="50"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0D4C93" />
+                  <stop offset="1" stop-color="#00C9C9" />
+                </linearGradient>
+                <clipPath id="clip0_502_209">
+                  <rect
+                    width="19"
+                    height="19"
+                    fill="white"
+                    transform="translate(33 15) rotate(90)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="dbl_swiper_next icon">
+            <svg
+              width="50"
+              height="50"
+              viewBox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="50"
+                height="50"
+                rx="25"
+                fill="url(#paint0_linear_502_214)"
+              />
+              <g clip-path="url(#clip0_502_214)">
+                <path
+                  d="M30.9151 24.4999C30.9151 24.1594 30.7851 23.819 30.5256 23.5593L22.356 15.3898C21.8363 14.8701 20.9937 14.8701 20.4742 15.3898C19.9547 15.9092 19.9547 16.7517 20.4742 17.2714L27.7032 24.4999L20.4745 31.7285C19.955 32.2482 19.955 33.0906 20.4745 33.61C20.9939 34.1299 21.8365 34.1299 22.3562 33.61L30.5259 25.4406C30.7854 25.1808 30.9151 24.8403 30.9151 24.4999Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_502_214"
+                  x1="25"
+                  y1="0"
+                  x2="25"
+                  y2="50"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#0D4C93" />
+                  <stop offset="1" stop-color="#00C9C9" />
+                </linearGradient>
+                <clipPath id="clip0_502_214">
+                  <rect
+                    width="19"
+                    height="19"
+                    fill="white"
+                    transform="matrix(4.37114e-08 1 1 -4.37114e-08 16 15)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        </div>
+   
+      </div>
+    </div>
+    <footer>
       <div class="container">
         <div class="footer_left">
           <div class="left_top">
@@ -477,11 +599,12 @@
           </div>
         </div>
       </div>
-    </footer>  -->
+    </footer>
   </div>
 </template>
 
 <script setup>
+import "swiper/css/grid";
 </script>
 
 <style lang="scss" scoped>
